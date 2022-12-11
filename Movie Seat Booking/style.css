@@ -1,0 +1,219 @@
+/*******************************/
+/* Global */
+
+:root {
+  --seat-color: #444451;
+  --seat-selected-color: #6feaf6;
+  --seat-occupied-color: #fff;
+  --btn-confirm-color-light: rgb(12, 135, 12);
+  --btn-cancel-color-light: rgb(197, 25, 25);
+  --btn-confirm-color-dark: rgb(7, 96, 7);
+  --btn-cancel-color-dark: rgb(156, 17, 17);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* default font size = 16px 
+        10px = 62.5%
+    */
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  font-family: sans-serif;
+  height: 100vb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242333;
+  color: #fff;
+}
+
+.seat,
+.seat-img {
+  width: 1.5rem;
+  height: 1.2em;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin: 0.3rem;
+}
+
+.seat-available,
+.seat-img-available {
+  background-color: var(--seat-color);
+}
+.seat-selected,
+.seat-img-selected {
+  background-color: var(--seat-selected-color);
+}
+.seat-occupied,
+.seat-img-occupied {
+  background-color: var(--seat-occupied-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden,
+.hidden-section {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.hidden-section {
+  position: absolute;
+}
+/************************/
+/* Movie selection */
+
+.movie-selection {
+  margin-bottom: 3rem;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.movie-select-input {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  appearance: none;
+}
+
+/************************/
+/* Showcase */
+.showcase {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.showcase-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-text {
+  font-size: 1.5rem;
+  color: #777;
+  margin-left: 0.2rem;
+}
+
+/************************/
+/* Seats Area */
+.screen-container {
+  perspective: 100rem;
+  margin-bottom: 4rem;
+}
+
+.screen {
+  background-color: #fff;
+  width: 100%;
+  height: 7rem;
+  margin-bottom: 2rem;
+  transform: rotateX(-45deg);
+  box-shadow: 0 0.3rem 1rem rgba(255, 255, 255, 70%);
+}
+
+.movie-seats {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.left-side {
+  display: flex;
+  margin-right: 2rem;
+}
+.middle-side {
+  display: flex;
+}
+.right-side {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.seat-available:hover,
+.seat-selected:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/************************/
+/* Pricing section */
+.pricing-text {
+  font-size: 1.5rem;
+}
+.pricing span {
+  color: var(--seat-selected-color);
+}
+
+/************************/
+/* Confirm\Cancel section */
+.cancel-confirm-section {
+  margin-top: 3rem;
+  display: flex;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.9rem;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #eee;
+  transition: all 0.3s;
+  width: 9.4rem;
+}
+
+.btn-confirm {
+  margin-right: 3rem;
+  background-color: var(--btn-confirm-color-light);
+}
+.btn-cancel {
+  background-color: var(--btn-cancel-color-light);
+}
+
+.btn-cancel:hover,
+.btn-cancel:active {
+  background-color: var(--btn-cancel-color-dark);
+  box-shadow: -0.2rem 0.2rem 0.1rem #aaa;
+  transform: translate(0%, -5%);
+}
+.btn-confirm:hover,
+.btn-confirm:active {
+  background-color: var(--btn-confirm-color-dark);
+  box-shadow: -0.2rem 0.2rem 0.1rem #aaa;
+  transform: translate(0%, -5%);
+}
+
+.confirm-message {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: var(--btn-confirm-color-light);
+  letter-spacing: 0.6rem;
+}
