@@ -8,6 +8,7 @@ const btnConfirm = document.querySelector(".btn-confirm");
 const btnClear = document.querySelector(".btn-cancel");
 const confirmMessage = document.querySelector(".confirm-message");
 const allMoviesSeats = document.querySelector(".all-movies");
+const allMovies = Array.from(document.querySelectorAll(".movie-seats"));
 
 let seatsContainer = document.querySelector(".active ");
 let movieName = getMovieName();
@@ -30,8 +31,7 @@ function getMovieName() {
 }
 
 function renderMovieSeats(movieName) {
-  const allMovies = Array.from(document.querySelectorAll(".movie-seats"));
-
+  // Selecting and rendering current movie seats
   allMovies.forEach((movie) => {
     if (movie.dataset.movieName === movieName) {
       movie.classList.remove("hidden-section");
@@ -44,7 +44,6 @@ function renderMovieSeats(movieName) {
 
   // Reselect seats container
   seatsContainer = document.querySelector(".active");
-  console.log(seatsContainer);
 }
 
 function addSeat(seatElement) {
@@ -84,6 +83,7 @@ function clearSelectedSeats() {
     seatEl.classList.add("seat-available");
   });
 }
+
 function clearPricing() {
   // Reset number of seats
   seatsNum = 0;
@@ -116,18 +116,22 @@ allMoviesSeats.addEventListener("click", function (e) {
 });
 
 movieInput.addEventListener("change", () => {
+  // Get movie name and ticket price
   ticketPrice = getTicketPrice();
   movieName = getMovieName();
+
+  // Render movie seats
   renderMovieSeats(movieName);
+
+  // Clearing selected seats
   clearSelectedSeats();
   clearPricing();
-  renderTotalPrice();
   confirmMessage.classList.add("hidden");
 });
 
 btnConfirm.addEventListener("click", function () {
-  confirmMessage.classList.remove("hidden");
   confirmSeatBooking();
+  confirmMessage.classList.remove("hidden");
 });
 
 btnClear.addEventListener("click", function () {
