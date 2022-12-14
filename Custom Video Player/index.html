@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="img/popcorn-striped-tub_157999-54.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/inputStyle.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <section class="video-player-section">
+      <h1 class="heading-primary">Custom Video Player</h1>
+      <video class="video" poster="./img/video-poster.jpg">
+        <source
+          src="./TOM _ JERRY - Official Trailer(240P).mp4"
+          type="video/mp4"
+        />
+        Your browser doesnot support video extention
+      </video>
+      <div class="controls-container">
+        <div>
+          <button class="btn start-btn"></button>
+          <button class="btn stop-btn hidden"></button>
+        </div>
+        <button class="btn restart-btn"></button>
+
+        <input
+          class="progress"
+          type="range"
+          min="0"
+          max="100"
+          step="0.1"
+          value="0"
+        />
+        <div class="timestamp">00:00</div>
+      </div>
+    </section>
+  </body>
+</html>

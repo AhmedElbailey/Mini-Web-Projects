@@ -1,0 +1,140 @@
+/************************************/
+/* GENERAL */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* *:focus {
+  outline: none;
+} */
+
+html {
+  /* default font size = 16px
+        10px = 62.5%
+    */
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #666;
+}
+
+.video-player-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.heading-primary {
+  font-size: 3rem;
+  letter-spacing: -0.3px;
+  color: #fff;
+  padding: 2.4rem 0rem;
+}
+
+/************************************/
+/* Video */
+.video {
+  width: 60%;
+  cursor: pointer;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  /* background-color: #000; */
+  object-fit: contain;
+}
+
+.controls-container {
+  background-color: #333;
+  width: 60%;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Triangle with CSS */
+.btn {
+  margin: 0rem 0.6rem;
+  cursor: pointer;
+}
+
+.start-btn {
+  background-color: transparent;
+  border: none;
+  width: 0;
+  height: 0;
+  border-top: 1.3rem solid transparent;
+  border-bottom: 1.3rem solid transparent;
+
+  border-left: 2.6rem solid #28a745;
+}
+
+.stop-btn {
+  background-color: transparent;
+  border: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-right: 1.1rem solid #fff;
+  border-left: 1.1rem solid #fff;
+}
+
+.restart-btn {
+  border: none;
+  padding: 1.3rem 1.3rem;
+  background-color: #dc3545;
+}
+
+.timestamp {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.progress {
+  flex-grow: 1;
+}
+
+/*************************************/
+/* QUERIES */
+
+/* max 800px */
+/* 800px/16px = 50em */
+@media (max-width: 50em) {
+  .video,
+  .controls-container {
+    width: 90%;
+  }
+}
+
+/* max 540px */
+/* 540px/16px = 33.75em */
+@media (max-width: 33.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* max 300px */
+/* 300px/16px = 18.75 */
+@media (max-width: 18.75em) {
+  html {
+    font-size: 30%;
+  }
+}
