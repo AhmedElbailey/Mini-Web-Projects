@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Rate Calculator</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <div class="application">
+      <img
+        src="https://vanillawebprojects.com/projects/exchange-rate/img/money.png"
+        alt="Missing image"
+      />
+      <h1 class="primary-heading">Exchange Rate Calculator</h1>
+      <p class="header-text">
+        Choose the currency and the amounts to get the exchange rate
+      </p>
+      <section class="container">
+        <div class="currency">
+          <select class="curr1" name="curr1" id="curr1"></select>
+          <input class="value1" type="number" value="1" min="0" />
+        </div>
+        <div class="swap-rate-container">
+          <button class="btn">Swap</button>
+          <p class="exchange-rate-text">1 USD = 0.00 EUR</p>
+        </div>
+        <div class="currency">
+          <select class="curr2" name="curr2" id="curr2"></select>
+          <span class="value2">0.00</span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
