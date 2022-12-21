@@ -1,0 +1,131 @@
+/**************************/
+/* GENERAL */
+/**************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-heading {
+  font-size: 3.2rem;
+  margin: 2.1rem 0rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem;
+}
+
+/**************************/
+/* Aside */
+/**************************/
+aside,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+}
+aside {
+  border-right: 0.1rem solid #111;
+}
+
+.btn {
+  width: 100%;
+  cursor: pointer;
+  color: black;
+  background-color: #fff;
+  border: 0.1rem solid #111;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+/**************************/
+/* Main */
+/**************************/
+
+main {
+  padding: 1rem 2rem;
+}
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row,
+.main-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+.total-row {
+  background-color: #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-bottom: 0.1rem solid #111;
+}
+
+.main-heading {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid #111;
+}
+
+.person-text,
+.wealth-text {
+  font-size: 2.4rem;
+}
+.person-text {
+  font-weight: 600;
+}
+
+.person-name,
+.wealth-number,
+.total-text,
+.total-wealth {
+  font-size: 2rem;
+}
+
+.person-name,
+.total-wealth {
+  font-weight: 600;
+}
