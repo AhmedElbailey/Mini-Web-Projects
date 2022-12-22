@@ -1,0 +1,284 @@
+/**********************************/
+/* General */
+/**********************************/
+:root {
+  --background-color: #30336b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  /* outline: none; */
+}
+
+html {
+  /* default font size = 16px 
+        10px = 62.5%
+    */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #333;
+  letter-spacing: 0px;
+  line-height: 1.5;
+  overflow-x: hidden;
+
+  transition: all 0.3s;
+  position: relative;
+}
+
+.open-nav {
+  overflow-x: scroll;
+  transform: translateX(20rem);
+}
+
+.primary-heading {
+  color: #fff;
+  font-size: 4.2rem;
+  font-weight: 600;
+}
+
+.secondary-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 1.9rem 0 1.5rem 0;
+  color: #000;
+}
+
+.tertiary-heading {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/**********************************/
+/* Navigation */
+/**********************************/
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100vh;
+  border-right: 0.2rem solid rgba(200, 200, 200, 0.1);
+  z-index: 100;
+  background-color: var(--background-color);
+
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+  transform: translateX(-100%);
+  transition: all 0.3s;
+}
+
+.nav-image-box {
+  padding: 3rem 0;
+  border-bottom: 0.2rem solid rgba(200, 200, 200, 0.1);
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-image-box img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+}
+
+.nav-list-item {
+  font-size: 1.6rem;
+  border-bottom: 0.2rem solid rgba(200, 200, 200, 0.1);
+  padding: 1.8rem 2rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  text-decoration: underline 0.15rem;
+  cursor: pointer;
+}
+/**********************************/
+/* Header */
+/**********************************/
+.header {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 4rem 1.5rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.haeder-text {
+  color: #fff;
+  font-size: 2rem;
+  margin: 2.6rem 0;
+}
+.btn-sign {
+  font-size: 2rem;
+  color: #fff;
+  background-color: #be2edd;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-menu {
+  width: 5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  height: auto;
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/**********************************/
+/* Main */
+/**********************************/
+.container {
+  margin: 0 auto;
+  width: 80rem;
+  max-width: 100%;
+  padding: 0 1.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.list {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+  padding-left: 4rem;
+}
+.list-item::marker {
+  font-size: 2rem;
+}
+
+/**********************************/
+/* Modal */
+/**********************************/
+.modal-view {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s;
+}
+.modal-contianer {
+  width: 40rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 1.5rem;
+}
+
+.close-modal-icon {
+  width: 3rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-modal-btn {
+  background-color: inherit;
+  border: none;
+}
+
+.modal-body {
+  color: #000;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.modal-text {
+  font-size: 1.5rem;
+  margin: 1.6rem 0;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form div {
+  margin: 1.5rem 0;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.form-submit-btn {
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #be2edd;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/**********************************/
+/* Queries */
+/**********************************/
+/* max-width: 660px */
+@media (max-width: 41.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* max-width: 530px */
+@media (max-width: 33.125em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+/* max-width: 420px */
+@media (max-width: 26.25em) {
+  html {
+    font-size: 30%;
+  }
+}

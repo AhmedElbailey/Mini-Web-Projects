@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Landing Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body class="">
+    <div class="model modal-view hidden">
+      <div class="model modal-contianer">
+        <div class="modal-header">
+          <h3 class="tertiary-heading">Sign Up</h3>
+          <button class="close-modal-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="close-modal-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">
+            Register with us to get offers, support and more
+          </p>
+          <form class="sign-up-form" name="sign-up-form" netlify>
+            <div>
+              <label class="form-label" for="name">Name</label>
+              <input
+                class="input input-name"
+                id="name"
+                type="text"
+                placeholder="Enter Name"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="input input-email"
+                id="email"
+                type="email"
+                placeholder="Enter Email"
+                required
+              />
+            </div>
+            <div>
+              <label class="form-label" for="password1">Password</label>
+              <input
+                class="input input-password1"
+                id="password1"
+                type="password"
+                placeholder="Enter Password"
+                required
+              />
+            </div>
+            <div>
+              <label class="form-label" for="password2">Confirm Password</label>
+              <input
+                class="input input-password2"
+                id="password2"
+                type="password"
+                placeholder="Confirm Password"
+                required
+              />
+            </div>
+            <button class="form-submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <figure class="nav-image-box">
+        <img
+          class="nav-image"
+          src="./261720438_1234038473785152_4525455967026084929_n.jpg"
+          alt="missing image"
+        />
+      </figure>
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-list-item">
+          <a href="#" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-list-item"><a href="#" class="nav-link">Blog</a></li>
+        <li class="nav-list-item">
+          <a href="mailto:aa5707139@gmail.com" class="nav-link">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="btn-menu"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+
+      <h1 class="primary-heading">My Landing Page</h1>
+      <p class="haeder-text">
+        Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Tenetur,
+        amet!
+      </p>
+      <button class="btn-sign">Sign Up</button>
+    </header>
+
+    <main class="container">
+      <section class="about-section">
+        <h2 class="secondary-heading">What is this landing page about?</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          error adipisci placeat iste saepe, quaerat ratione aspernatur ab.
+          Corrupti sint autem eius quaerat numquam placeat illum culpa sunt fuga
+          quas. Illum molestiae facilis quia officia ea molestias nihil natus
+          maxime eius.
+        </p>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa
+          tenetur explicabo modi temporibus reprehenderit officiis cum, natus
+          in! Illum molestiae facilis quia officia ea molestias nihil natus
+          maxime eius.
+        </p>
+      </section>
+
+      <section class="more-section">
+        <h2 class="secondary-heading">Tell Me More</h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          error adipisci placeat iste saepe, quaerat ratione aspernatur ab.
+          Corrupti sint autem eius quaerat numquam placeat illum culpa sunt fuga
+          quas. Illum molestiae facilis quia officia ea molestias nihil natus
+          maxime eius.
+        </p>
+      </section>
+
+      <section class="benefits-section">
+        <h2 class="secondary-heading">Benefits</h2>
+        <ul class="list">
+          <li class="list-item">Lifetime Access</li>
+          <li class="list-item">30 Day Money Back</li>
+          <li class="list-item">Tailored Customer Support</li>
+        </ul>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          error adipisci placeat iste saepe, quaerat ratione aspernatur ab.
+          Corrupti sint autem eius quaerat numquam placeat illum culpa sunt fuga
+          quas. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Inventore error adipisci placeat iste saepe, quaerat ratione
+          aspernatur ab. Corrupti sint autem eius quaerat numquam placeat illum
+          culpa sunt fuga quas. Illum molestiae facilis quia officia ea
+          molestias nihil natus maxime eius.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

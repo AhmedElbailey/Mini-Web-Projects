@@ -1,6 +1,6 @@
 # Mini-Web-Projects
 
-4 Mini-web projects for deffirent applications meant for practice.
+6 Mini-web projects for different applications meant for practice.
 
 ## Learned
 
