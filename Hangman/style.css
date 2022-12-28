@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #34495e;
+  --secondary-color: #2980b9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: hidden;
+}
+
+.primary-heading {
+  font-size: 3.2rem;
+  margin: 2rem 0;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/*****************************************/
+/* Game */
+/*****************************************/
+.game-container {
+  width: 39rem;
+  max-width: 80%;
+  margin-top: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.4rem;
+  stroke-linecap: round;
+
+  width: 20rem;
+  height: 25rem;
+  margin-bottom: 3rem;
+}
+
+.word {
+  align-self: center;
+}
+
+.letter-container {
+  width: 2.5rem;
+  height: 5rem;
+  font-size: 3rem;
+  border-bottom: 0.3rem solid var(--secondary-color);
+
+  margin: 0 0.3rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrong-letter-container {
+  font-size: 2.4rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wrong-letter-container p {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+/*****************************************/
+/* Notification */
+/*****************************************/
+.notification-container {
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+  transition: all 0.3s;
+}
+
+.hidden-notification {
+  transform: translate(50%, 100%);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  display: hidden;
+}
+
+/*****************************************/
+/* Result Messages */
+/*****************************************/
+.result-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-container {
+  /* width: 40rem; */
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  background-color: var(--secondary-color);
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.result-message {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 2rem 0 4rem 0;
+}
+
+.btn-replay {
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: var(--secondary-color);
+  border: none;
+  padding: 1.2rem 2rem;
+  cursor: pointer;
+}
+
+/*****************************************/
+/* Quaries */
+/*****************************************/
+
+/* max-width : 360px */
+@media (max-width: 22.5em) {
+  html {
+    font-size: 50%;
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <h1 class="primary-heading">Hangman</h1>
+    <p class="header-text">Find the hidden word - Enter a letter</p>
+    <div class="game-container">
+      <svg class="figure-container">
+        <line x1="20" x2="100" y1="230" y2="230" />
+        <line x1="60" x2="60" y1="230" y2="20" />
+        <line x1="60" x2="140" y1="20" y2="20" />
+        <line x1="140" x2="140" y1="20" y2="50" />
+
+        <!-- Parts -->
+        <circle
+          r="20"
+          cx="140"
+          cy="70"
+          class="figure-part figure-part0 hidden"
+        />
+        <line
+          x1="140"
+          x2="140"
+          y1="90"
+          y2="150"
+          class="figure-part figure-part1 hidden"
+        />
+        <line
+          x1="140"
+          x2="120"
+          y1="120"
+          y2="100"
+          class="figure-part figure-part2 hidden"
+        />
+        <line
+          x1="140"
+          x2="160"
+          y1="120"
+          y2="100"
+          class="figure-part figure-part3 hidden"
+        />
+        <line
+          x1="140"
+          x2="120"
+          y1="150"
+          y2="180"
+          class="figure-part figure-part4 hidden"
+        />
+        <line
+          x1="140"
+          x2="160"
+          y1="150"
+          y2="180"
+          class="figure-part figure-part5 hidden"
+        />
+      </svg>
+
+      <div class="wrong-letter-container hidden">
+        <!-- <p>Wrong</p>
+        <span class="wrong-letter">j</span>
+        <span class="wrong-letter">,</span>
+        <span class="wrong-letter">a</span>
+        <span class="wrong-letter">,</span>
+        <span class="wrong-letter">k</span> -->
+      </div>
+
+      <div class="word">
+        <!-- <p class="letter-container">
+          <span class="letter letter1 hidden">p</span>
+        </p>
+        <p class="letter-container"><span class="letter letter2 hidden" >a</span></p>
+        <p class="letter-container"><span class="letter letter3 hidden">m</span></p> -->
+      </div>
+    </div>
+
+    <div class="notification-container hidden-notification">
+      <p>You have already entered this letter</p>
+    </div>
+
+    <div class="result-container hidden">
+      <div class="popup-container">
+        <p class="result-message">Unfortunately you lost. 😕</p>
+        <!-- <p class="result-message">Congratulations! You won! 😃</p> -->
+        <button class="btn-replay">Play again</button>
+      </div>
+    </div>
+  </body>
+</html>
